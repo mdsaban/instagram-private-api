@@ -221,13 +221,15 @@ export class UploadRepository extends Repository {
       retry_context: JSON.stringify(
         retryContext || { num_step_auto_retry: 0, num_reupload: 0, num_step_manual_retry: 0 },
       ),
-      media_type: options.mediaType || '2',
+      media_type: '2',
+      "is_clips_video": "1",
       xsharing_user_ids: JSON.stringify([]),
       upload_id: uploadId.toString(),
       upload_media_height: height?.toString(),
       upload_media_width: width?.toString(),
       upload_media_duration_ms: duration.toString(),
     };
+    console.log('Added by Saban for testing', ruploadParams)
     if (options.isSidecar) {
       ruploadParams.is_sidecar = '1';
     }
