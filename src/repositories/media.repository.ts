@@ -388,7 +388,7 @@ export class MediaRepository extends Repository {
     }
 
     const { body } = await this.client.request.send<MediaRepositoryConfigureResponseRootObject>({
-      url: '/api/v1/media/configure/',
+      url: '/api/v1/media/configure_to_clips/',
       method: 'POST',
       qs: {
         video: '1',

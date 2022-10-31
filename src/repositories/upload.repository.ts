@@ -223,13 +223,13 @@ export class UploadRepository extends Repository {
       ),
       media_type: '2',
       "is_clips_video": "1",
+      "clips_share_preview_to_feed": 1,
       xsharing_user_ids: JSON.stringify([]),
       upload_id: uploadId.toString(),
       upload_media_height: height?.toString(),
       upload_media_width: width?.toString(),
       upload_media_duration_ms: duration.toString(),
     };
-    console.log('Added by Saban for testing', ruploadParams)
     if (options.isSidecar) {
       ruploadParams.is_sidecar = '1';
     }
